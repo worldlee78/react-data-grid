@@ -1,6 +1,6 @@
 const Enzyme = require('enzyme');
 const React = require('react');
-
+const PropTypes = require('prop-types');
 const ContainerEditorWrapper = require('../ContainerEditorWrapper');
 
 class FakeComponent extends React.Component {
@@ -14,7 +14,7 @@ class FakeContainer extends React.Component {
 }
 
 FakeContainer.propTypes = {
-  refCallback: React.PropTypes.func.IsRequired
+  refCallback: PropTypes.func.IsRequired
 };
 
 describe('ContainerEditorWrapper', () => {

@@ -1,7 +1,7 @@
 const ColumnMetrics        = require('./ColumnMetrics');
 const DOMMetrics           = require('./DOMMetrics');
 Object.assign            = require('object-assign');
-const PropTypes            = require('react').PropTypes;
+const PropTypes            = require('prop-types');
 const ColumnUtils = require('./ColumnUtils');
 import ReactDOM from 'react-dom';
 
