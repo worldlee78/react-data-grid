@@ -1,5 +1,4 @@
 import ColumnUtils from './ColumnUtils';
-const React = require('react');
 const PropTypes = require('prop-types');
 const ReactDOM = require('react-dom');
 const DOMMetrics = require('./DOMMetrics');
