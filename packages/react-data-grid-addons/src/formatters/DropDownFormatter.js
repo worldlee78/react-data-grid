@@ -2,8 +2,9 @@
 // Accepts the same parameters as the DropDownEditor.
 const React = require('react');
 const PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
 
-const DropDownFormatter = React.createClass({
+const DropDownFormatter = createReactClass({
   propTypes: {
     options: PropTypes.arrayOf(
       PropTypes.oneOfType([

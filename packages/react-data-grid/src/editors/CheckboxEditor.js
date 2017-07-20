@@ -1,8 +1,9 @@
 const React = require('react');
 const PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
 require('../../../../themes/react-data-grid-checkbox.css');
 
-const CheckboxEditor = React.createClass({
+const CheckboxEditor = createReactClass({
 
   propTypes: {
     value: PropTypes.bool,

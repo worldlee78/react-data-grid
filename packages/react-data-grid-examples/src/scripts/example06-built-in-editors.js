@@ -2,6 +2,7 @@ const ReactDataGrid = require('react-data-grid');
 const exampleWrapper = require('../components/exampleWrapper');
 const React = require('react');
 const { Editors, Formatters } = require('react-data-grid-addons');
+const createReactClass = require('create-react-class');
 
 const { AutoComplete: AutoCompleteEditor, DropDownEditor } = Editors;
 const { DropDownFormatter } = Formatters;
@@ -22,7 +23,7 @@ const IssueTypesEditor = <DropDownEditor options={issueTypes}/>;
 
 const IssueTypesFormatter = <DropDownFormatter options={issueTypes} value="bug"/>;
 
-const Example = React.createClass({
+const Example = createReactClass({
   getInitialState() {
     this._columns = [
       {

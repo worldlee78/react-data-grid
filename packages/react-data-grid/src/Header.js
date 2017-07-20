@@ -1,5 +1,6 @@
 const React               = require('react');
 const ReactDOM            = require('react-dom');
+const createReactClass    = require('create-react-class');
 const joinClasses         = require('classnames');
 const shallowCloneObject  = require('./shallowCloneObject');
 const ColumnMetrics       = require('./ColumnMetrics');
@@ -18,7 +19,7 @@ type Column = {
 // The list of the propTypes that we want to include in the Header div
 const knownDivPropertyKeys = ['height', 'onScroll'];
 
-const Header = React.createClass({
+const Header = createReactClass({
   propTypes: {
     columnMetrics: PropTypes.shape({  width: PropTypes.number.isRequired, columns: PropTypes.any }).isRequired,
     totalWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),

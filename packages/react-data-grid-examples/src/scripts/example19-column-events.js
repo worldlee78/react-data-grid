@@ -2,10 +2,11 @@ const ReactDataGrid = require('react-data-grid');
 const exampleWrapper = require('../components/exampleWrapper');
 const React = require('react');
 const { Editors: { DropDownEditor } } = require('react-data-grid-addons');
+const createReactClass = require('create-react-class');
 
 const titles = ['Dr.', 'Mr.', 'Mrs.', 'Miss', 'Ms.'];
 
-const Example = React.createClass({
+const Example = createReactClass({
   getInitialState: function() {
     this._columns = [
       {

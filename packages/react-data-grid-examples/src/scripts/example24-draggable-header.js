@@ -4,8 +4,9 @@ const exampleWrapper = require('../components/exampleWrapper');
 const {
   DraggableHeader: { DraggableContainer }
 } = require('react-data-grid-addons');
+const createReactClass = require('create-react-class');
 
-const Example = React.createClass({
+const Example = createReactClass({
   getInitialState() {
     return {
       columns: [
@@ -77,7 +78,7 @@ const Example = React.createClass({
 
   render() {
     return (
-      <DraggableContainer 
+      <DraggableContainer
         onHeaderDrop={this.onHeaderDrop}>
         <ReactDataGrid
           columns={this.state.columns}

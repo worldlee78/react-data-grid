@@ -1,6 +1,7 @@
 const React          = require('react');
 const ReactDOM      = require('react-dom');
 const joinClasses    = require('classnames');
+const createReactClass = require('create-react-class');
 const ExcelColumn    = require('./PropTypeShapes/ExcelColumn');
 const ResizeHandle   = require('./ResizeHandle');
 require('../../../themes/react-data-grid-header.css');
@@ -12,7 +13,7 @@ function simpleCellRenderer(objArgs: {column: {name: string}}): ReactElement {
   return <div className="widget-HeaderCell__value">{headerText}</div>;
 }
 
-const HeaderCell = React.createClass({
+const HeaderCell = createReactClass({
 
   propTypes: {
     renderer: PropTypes.oneOfType([PropTypes.func, PropTypes.element]).isRequired,

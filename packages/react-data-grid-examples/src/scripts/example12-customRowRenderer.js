@@ -3,8 +3,9 @@ const { Row } = ReactDataGrid;
 const exampleWrapper = require('../components/exampleWrapper');
 const React = require('react');
 const PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
 
-const RowRenderer = React.createClass({
+const RowRenderer = createReactClass({
   propTypes: {
     idx: PropTypes.string.isRequired
   },
@@ -32,7 +33,7 @@ const RowRenderer = React.createClass({
   }
 });
 
-const Example = React.createClass({
+const Example = createReactClass({
   getInitialState() {
     this.createRows();
     this._columns = [

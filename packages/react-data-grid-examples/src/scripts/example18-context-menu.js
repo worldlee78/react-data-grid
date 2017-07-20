@@ -2,10 +2,11 @@ const ReactDataGrid = require('react-data-grid');
 const exampleWrapper = require('../components/exampleWrapper');
 const React = require('react');
 const PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
 
 const { Menu: { ContextMenu, MenuItem, SubMenu } } = require('react-data-grid-addons');
 
-const Example = React.createClass({
+const Example = createReactClass({
   getInitialState() {
     this._columns = [
       { key: 'id', name: 'ID' },
@@ -69,7 +70,7 @@ const Example = React.createClass({
 
 // Create the context menu.
 // Use this.props.rowIdx and this.props.idx to get the row/column where the menu is shown.
-const MyContextMenu = React.createClass({
+const MyContextMenu = createReactClass({
   propTypes: {
     onRowDelete: PropTypes.func.isRequired,
     onRowInsertAbove: PropTypes.func.isRequired,

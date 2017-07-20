@@ -4,6 +4,7 @@ const React = require('react');
 const PropTypes = require('prop-types');
 const FakeObjectDataStore = require('./FakeObjectDataStore');
 const Immutable = require('immutable');
+const createReactClass = require('create-react-class');
 const {
   Editors:
     { AutoComplete: AutoCompleteEditor, DropDownEditor },
@@ -165,7 +166,7 @@ const columns = [
   }
 ];
 
-const MyContextMenu = React.createClass({
+const MyContextMenu = createReactClass({
   propTypes: {
     rowIdx: PropTypes.string.isRequired,
     idx: PropTypes.string.isRequired
@@ -183,7 +184,7 @@ const MyContextMenu = React.createClass({
   }
 });
 
-const Component = React.createClass({
+const Component = createReactClass({
   propTypes: {
     handleCellDrag: PropTypes.func.isRequired
   },

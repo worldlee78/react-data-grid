@@ -1,7 +1,8 @@
 const React = require('react');
 const PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
 
-const SimpleCellFormatter = React.createClass({
+const SimpleCellFormatter = createReactClass({
   propTypes: {
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.object, PropTypes.bool]).isRequired
   },

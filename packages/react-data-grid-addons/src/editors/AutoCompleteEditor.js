@@ -3,6 +3,7 @@ const ReactDOM                = require('react-dom');
 const ReactAutocomplete       = require('ron-react-autocomplete');
 const PropTypes               = require('prop-types');
 const { shapes: { ExcelColumn } } = require('react-data-grid');
+const createReactClass        = require('create-react-class');
 require('../../../../themes/ron-react-autocomplete.css');
 
 let optionPropType = PropTypes.shape({
@@ -10,7 +11,7 @@ let optionPropType = PropTypes.shape({
   title: PropTypes.string
 });
 
-const AutoCompleteEditor = React.createClass({
+const AutoCompleteEditor = createReactClass({
 
   propTypes: {
     onCommit: PropTypes.func,

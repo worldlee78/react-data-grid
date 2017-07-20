@@ -1,5 +1,6 @@
 const React              = require('react');
 const PropTypes          = require('prop-types');
+const createReactClass   = require('create-react-class');
 const joinClasses         = require('classnames');
 const DEFINE_SORT = {
   ASC: 'ASC',
@@ -7,7 +8,7 @@ const DEFINE_SORT = {
   NONE: 'NONE'
 };
 
-const SortableHeaderCell = React.createClass({
+const SortableHeaderCell = createReactClass({
   propTypes: {
     columnKey: PropTypes.string.isRequired,
     column: PropTypes.shape({ name: PropTypes.node }),

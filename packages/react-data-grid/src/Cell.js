@@ -1,6 +1,7 @@
 import _ from 'underscore';
 const React = require('react');
 const PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
 const ReactDOM = require('react-dom');
 const joinClasses = require('classnames');
 const EditorContainer = require('./editors/EditorContainer');
@@ -17,7 +18,7 @@ require('../../../themes/react-data-grid-cell.css');
 // The list of the propTypes that we want to include in the Cell div
 const knownDivPropertyKeys = ['height', 'tabIndex', 'value'];
 
-const Cell = React.createClass({
+const Cell = createReactClass({
 
   propTypes: {
     rowIdx: PropTypes.number.isRequired,

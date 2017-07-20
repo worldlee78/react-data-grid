@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import AppConstants from './AppConstants';
 
-const CellExpand = React.createClass({
+const CellExpand = createReactClass({
   getInitialState() {
     let expanded = this.props.expandableOptions && this.props.expandableOptions.expanded;
     return { expanded: expanded };

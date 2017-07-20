@@ -1,6 +1,7 @@
 const ReactDataGrid = require('react-data-grid');
 const exampleWrapper = require('../components/exampleWrapper');
 const React = require('react');
+const createReactClass = require('create-react-class');
 
 function createRows() {
   let rows = [];
@@ -48,7 +49,7 @@ let columns = [
   }
 ];
 
-const Example = React.createClass({
+const Example = createReactClass({
   getInitialState() {
     let rows = createRows();
     return { expanded: {}, rows: rows };

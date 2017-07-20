@@ -2,9 +2,10 @@ const ReactDataGrid = require('react-data-grid');
 const exampleWrapper = require('../components/exampleWrapper');
 const React = require('react');
 const PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
 
 // Custom Formatter component
-const PercentCompleteFormatter = React.createClass({
+const PercentCompleteFormatter = createReactClass({
   propTypes: {
     value: PropTypes.number.isRequired
   },
@@ -20,7 +21,7 @@ const PercentCompleteFormatter = React.createClass({
   }
 });
 
-const Example = React.createClass({
+const Example = createReactClass({
   getInitialState() {
     this.createRows();
     this._columns = [

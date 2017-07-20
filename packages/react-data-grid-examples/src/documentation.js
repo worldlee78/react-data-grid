@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var ReactRouter = require('react-router');
+var createReactClass = require('create-react-class');
 
 var gettingStarted = require('./scripts/documentation01-gettingstarted');
 var apiReference = require('./scripts/documentation02-apireference');
@@ -8,7 +9,7 @@ var componentsDocs = require('./scripts/documentation03-components');
 
 var { Route, RouteHandler } = ReactRouter;
 
-var App = React.createClass({
+var App = createReactClass({
   render: function () {
     return (
       <div>

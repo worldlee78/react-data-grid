@@ -2,8 +2,9 @@ const ReactDataGrid = require('react-data-grid');
 const { Toolbar, Data: { Selectors } } = require('react-data-grid-addons');
 const exampleWrapper = require('../components/exampleWrapper');
 const React = require('react');
+const createReactClass = require('create-react-class');
 
-const Example = React.createClass({
+const Example = createReactClass({
   getInitialState() {
     this._columns = [
       {

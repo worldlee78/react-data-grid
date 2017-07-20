@@ -3,6 +3,7 @@ const ReactDOM = require('react-dom');
 const Moment 		 = require('moment');
 const $					 = require('jquery');
 const PropTypes  = require('prop-types');
+const createReactClass        = require('create-react-class');
 
 const DateRangePicker = function(element, options, cb) {
 	// by default, the daterangepicker element is placed at the bottom of HTML body
@@ -1135,7 +1136,7 @@ let validateDate = function(props, propName) {
   }
 };
 
-let DateRangeFilter = React.createClass({
+let DateRangeFilter = createReactClass({
 
   getInitialState: function() {
     return {dateRange: ''};

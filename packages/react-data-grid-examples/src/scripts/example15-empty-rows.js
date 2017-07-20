@@ -1,14 +1,15 @@
 const ReactDataGrid = require('react-data-grid');
 const exampleWrapper = require('../components/exampleWrapper');
 const React = require('react');
+const createReactClass = require('create-react-class');
 
-const EmptyRowsView = React.createClass({
+const EmptyRowsView = createReactClass({
   render() {
     return (<div>Nothing to show</div>);
   }
 });
 
-const Example = React.createClass({
+const Example = createReactClass({
   getInitialState() {
     this._rows = [];
     this._columns = [

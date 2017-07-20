@@ -1,5 +1,6 @@
 const React = require('react');
 const classNames = require('classnames');
+const createReactClass = require('create-react-class');
 require('../assets/css/exampleWrapper.css');
 
 const emptyAction = () => { };
@@ -18,7 +19,7 @@ const exampleWrapper = ({
 
   const examplePlaygroundLinkAction = doesExamplePlayGroundLinkExist ? emptyAction : disableLink;
 
-  return React.createClass({
+  return createReactClass({
     render() {
       return (
         <div>

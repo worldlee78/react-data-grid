@@ -1,5 +1,6 @@
 const React         = require('react');
 const ReactDOM = require('react-dom');
+const createReactClass = require('create-react-class');
 const rewire        = require('rewire');
 const Grid          = rewire('../Grid');
 const TestUtils     = require('react-addons-test-utils');
@@ -9,14 +10,14 @@ import { shallow } from 'enzyme';
 import { ContextMenu } from 'react-contextmenu';
 
 let testElement;
-let HeaderStub = React.createClass({
+let HeaderStub = createReactClass({
   setScrollLeft() {
   },
   render() {
     return (<div></div>);
   }
 });
-let ViewportStub = React.createClass({
+let ViewportStub = createReactClass({
   getScroll() {
     return {scrollLeft: 0};
   },
@@ -100,7 +101,7 @@ describe('Base Grid Tests', () => {
 });
 
 describe('Empty Grid Tests', () => {
-  let EmptyRowsView = React.createClass({
+  let EmptyRowsView = createReactClass({
     render: function() {
       return (<div>Nothing to show</div>);
     }

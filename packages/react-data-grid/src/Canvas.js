@@ -2,6 +2,7 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const joinClasses = require('classnames');
 const PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
 const ScrollShim = require('./ScrollShim');
 const Row = require('./Row');
 const cellMetaDataShape = require('./PropTypeShapes/CellMetaDataShape');
@@ -12,7 +13,7 @@ import shallowEqual from 'fbjs/lib/shallowEqual';
 import RowsContainer from './RowsContainer';
 import RowGroup from './RowGroup';
 
-const Canvas = React.createClass({
+const Canvas = createReactClass({
   mixins: [ScrollShim],
 
   propTypes: {

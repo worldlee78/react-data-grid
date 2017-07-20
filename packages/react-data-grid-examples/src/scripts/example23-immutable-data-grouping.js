@@ -2,6 +2,7 @@ const ReactDataGrid = require('react-data-grid');
 const exampleWrapper = require('../components/exampleWrapper');
 const React = require('react');
 const PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
 
 const faker = require('faker');
 const Immutable = require('immutable');
@@ -28,7 +29,7 @@ for (let rowIdx = 1; rowIdx < 100; rowIdx++) {
   _rows.push(row);
 }
 
-const CustomToolbar = React.createClass({
+const CustomToolbar = createReactClass({
   propTypes: {
     groupBy: PropTypes.array.isRequired,
     onColumnGroupAdded: PropTypes.func.isRequired,
@@ -43,7 +44,7 @@ const CustomToolbar = React.createClass({
   }
 });
 
-const Example = React.createClass({
+const Example = createReactClass({
   getInitialState() {
     return {
       rows: new Immutable.fromJS(_rows),

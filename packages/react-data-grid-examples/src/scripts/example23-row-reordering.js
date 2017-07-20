@@ -2,6 +2,7 @@ const ReactDataGrid = require('react-data-grid');
 const exampleWrapper = require('../components/exampleWrapper');
 const React = require('react');
 const PropTypes = require('prop-types');
+const createReactClass = require('create-react-class');
 
 const {
    Draggable: { Container: DraggableContainer, RowActionsCell, DropTargetRowContainer },
@@ -10,7 +11,7 @@ const {
 
 const RowRenderer = DropTargetRowContainer(ReactDataGrid.Row);
 
-const Example = React.createClass({
+const Example = createReactClass({
   propTypes: {
     rowKey: PropTypes.string.isRequired
   },

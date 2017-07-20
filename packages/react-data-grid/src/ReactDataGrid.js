@@ -1,5 +1,6 @@
 const React                 = require('react');
 const PropTypes             = require('prop-types');
+const createReactClass = require('create-react-class');
 const ReactDOM = require('react-dom');
 const BaseGrid              = require('./Grid');
 const Row                   = require('./Row');
@@ -42,7 +43,7 @@ type RowUpdateEvent = {
   rowIdx: number;
 };
 
-const ReactDataGrid = React.createClass({
+const ReactDataGrid = createReactClass({
 
   mixins: [
     ColumnMetricsMixin,
