@@ -1,6 +1,6 @@
 {
-  "name": "react-data-grid",
-  "version": "2.0.49",
+  "name": "@dna/react-data-grid",
+  "version": "2.0.50",
   "description": "The grid core",
   "scripts": {
     "beforepublish": "node ../../ci/publish/replacePackageEntry react-data-grid true",
@@ -14,5 +14,8 @@
     "core"
   ],
   "author": "Adazzle",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://artifactory.twitter.biz/api/npm/js-releases-local"
+  }
 }
